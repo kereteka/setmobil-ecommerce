@@ -1,95 +1,42 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// // pages/products/[id].tsx
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+// import type { InferGetStaticPropsType, GetStaticProps, GetStaticPaths } from 'next';
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+// type Product = {
+//   id: number;
+//   title: string;
+//   price: number;
+//   description: string;
+//   category: {
+//     id: number;
+//     name: string;
+//     image: string;
+//   };
+//   images: string[];
+// };
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const res = await fetch('https://api.escuelajs.co/api/v1/products');
+//   const products = await res.json();
+//   const paths = products.map((product: Product) => ({
+//     params: { id: product.id.toString() },
+//   }));
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+//   return { paths, fallback: 'blocking' };
+// };
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+// export const getStaticProps: GetStaticProps<{ product: Product }> = async (context) => {
+//   const { id } = context.params!;
+//   const res = await fetch(`https://api.escuelajs.co/api/v1/products/${id}`);
+//   const product: Product = await res.json();
+//   return { props: { product } };
+// };
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
-}
+// const ProductPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ product }) => (
+//   <div>
+//     <h1>{product.title}</h1>
+//     {/* Diğer ürün detayları */}
+//   </div>
+// );
+
+// export default ProductPage;

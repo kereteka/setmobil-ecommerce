@@ -5244,6 +5244,11 @@ elliptic@^6.5.3, elliptic@^6.5.4:
     minimalistic-assert "^1.0.1"
     minimalistic-crypto-utils "^1.0.1"
 
+embla-carousel-autoplay@^8.0.0-rc22:
+  version "8.0.0-rc22"
+  resolved "https://registry.npmjs.org/embla-carousel-autoplay/-/embla-carousel-autoplay-8.0.0-rc22.tgz"
+  integrity sha512-UFR9ocKapxuYwcAOv8mb6Rmy7TENpzzHTymKADzB1L5dAJJxjUtOci/OpE3KrZedQaniLMz3HIO9hHqgj1h/3w==
+
 embla-carousel-react@^8.0.0-rc22:
   version "8.0.0-rc22"
   resolved "https://registry.npmjs.org/embla-carousel-react/-/embla-carousel-react-8.0.0-rc22.tgz"
