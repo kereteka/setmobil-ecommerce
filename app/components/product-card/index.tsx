@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, Text, Badge, Image, Button, Group } from '@mantine/core';
+import { Card, Text, Badge, Image, Group } from '@mantine/core';
 import { Product } from '@/types';
 import AddToCartButton from '../add-to-cart-button';
 
