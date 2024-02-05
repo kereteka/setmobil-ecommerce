@@ -1,4 +1,4 @@
-import ProductCard from '@/app/components/product-card';
+import ProductDetailsCard from '@/app/components/product-details';
 
 const fetchProduct = async (id: string | undefined) =>
   fetch(`https://api.escuelajs.co/api/v1/products/${id}`, {
@@ -8,7 +8,7 @@ const fetchProduct = async (id: string | undefined) =>
 const Product = async ({ params }: { params?: { product: string } }) => {
   const id = params?.product;
   const product = (await fetchProduct(id)) || [];
-  return <ProductCard product={product} />;
+  return <ProductDetailsCard product={product} />;
 };
 
 export default Product;

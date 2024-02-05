@@ -1,0 +1,84 @@
+.card {
+  display: flex;
+  flex-direction: col;
+  // align-items: center;
+  height: auto;
+  justify-content: space-between; // Kartı yatayda ortalar
+  margin: auto; // Kartı sayfada ortalar
+  max-width: 80%; // Maksimum genişlik
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); // Gölge efekti
+
+  .content {
+    display: flex;
+    width: 100%;
+    height: max;
+    flex-direction: row;
+    justify-content: space-between; // Kartı yatayda ortalar
+    align-items: center; // İçerikleri düzgün hizalar
+
+    .image {
+      flex: 1;
+      width: 300px; // Resim boyutu
+      height: auto;
+    }
+    .details {
+      flex: 2;
+      height: 300px;
+      display: flex;
+      justify-content: center; // Dikeyde ortalar
+      align-items: center; // Yatayda ortalar
+      .centered_content {
+        display: flex;
+        align-items: flex-start; // İçeriği sol tarafa yaslar
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 90%;
+        max-width: 60%;
+        margin-left: auto;
+        flex-direction: column;
+        justify-content: space-around; // İçeriği dikey olarak ortalar
+        margin: auto; // İçeriği yatayda ortalar
+        width: fit-content; // İçeriğin genişliğine göre boyutlandırır
+        // Buraya centered-content için özel stil tanımları eklenebilir
+      }
+
+      .mantine-Text {
+        margin-bottom: 10px;
+      }
+
+      .mantine-Button {
+        margin-top: 10px;
+        width: 100px;
+      }
+    }
+  }
+  .description {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    padding: 20px; // İç boşluk
+    border-top: 1px solid #eaeaea; // Üst çizgi
+    text-align: center; // Metni sola hizalar
+  }
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    .content {
+      height: auto;
+      flex-direction: column; // Mobilde sütun düzeni
+      .image,
+      .details {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        .centered_content {
+          align-items: center;
+          text-align: center;
+          height: 200px;
+        }
+      }
+    }
+    .description {
+      margin-bottom: 100px;
+    }
+  }
+}

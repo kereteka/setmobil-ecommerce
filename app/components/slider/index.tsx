@@ -12,7 +12,7 @@ import { Category, Product } from '@/types';
 type PropType = {
   options?: EmblaOptionsType;
   items: Product[] | Category[] | undefined;
-  type: string;
+  type?: string;
 };
 
 const Slider: React.FC<PropType> = ({ options, items, type }) => {
