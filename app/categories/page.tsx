@@ -4,14 +4,6 @@ import ProductList from '@/app/components/product-list';
 import styles from './page.module.scss';
 import SearchBar from '@/app/components/search-bar';
 
-export async function generateStaticParams() {
-  const productResponse = await fetch('https://api.escuelajs.co/api/v1/products/');
-  const posts = await productResponse.json();
-  return posts.map((post: any) => ({
-    id: String(post.id),
-  }));
-}
-
 const fetchProducts = async (
   id: string | string[] | undefined,
   title: string | string[] | undefined
