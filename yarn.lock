@@ -5262,7 +5262,7 @@ embla-carousel-reactive-utils@8.0.0-rc22:
   resolved "https://registry.npmjs.org/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.0.0-rc22.tgz"
   integrity sha512-K4b8QhQGXYW5wr4l+U6XryhafsFV5c/IyohDnZN3MGoYIB9xY7qpjUWAcs5bTDjAD+qCZPOuXre0D3IVa28mqw==
 
-embla-carousel@8.0.0-rc22:
+embla-carousel@^8.0.0-rc22, embla-carousel@8.0.0-rc22:
   version "8.0.0-rc22"
   resolved "https://registry.npmjs.org/embla-carousel/-/embla-carousel-8.0.0-rc22.tgz"
   integrity sha512-MeXnPT1LShfgAu8qXj3CskayV0R6OkHx7w3cPTx+Q5ZWKyShKpIuu7qVQJ5BoFegalE4n6yxqoQaRuGFbK9pYw==
