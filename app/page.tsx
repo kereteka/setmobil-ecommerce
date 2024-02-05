@@ -43,13 +43,13 @@ const HomePage: NextPage<{ products: Product[]; categories: Category[] }> = asyn
       <h1>Popüler Ürünler</h1>
       <div>
         <section className="sandbox__carousel">
-          <SliderWithNoSSR options={OPTIONS} items={products} type="product" />
+          <SliderWithNoSSR options={OPTIONS} items={products} type="products" />
         </section>
       </div>
       <div>
         <h1>Kategoriler</h1>
         <section className="sandbox__carousel">
-          <SliderWithNoSSR options={OPTIONS} items={categories} type="category" />
+          <SliderWithNoSSR options={OPTIONS} items={categories} type="categories" />
         </section>
       </div>
     </div>

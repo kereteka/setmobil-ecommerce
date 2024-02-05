@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
@@ -15,10 +16,16 @@ type PropType = {
 };
 
 const Slider: React.FC<PropType> = ({ options, items, type }) => {
+  const router = useRouter();
   const [emblaRef] = useEmblaCarousel(options, [Autoplay()]);
 
   const handleImageClick = (item: string, itemId: number) => {
-    window.location.href = `/${item}/${itemId}`;
+    // window.location.href = `/${item}/${itemId}`;
+    let path;
+    item === 'categories'
+      ? (path = `categories/?categoryId=${itemId}`)
+      : (path = `${item}/${itemId}`);
+    router.push(path);
   };
 
   return (
