@@ -2,6 +2,7 @@
 
 import { Card, Text, Badge, Image, Button, Group } from '@mantine/core';
 import { Product } from '@/types';
+import AddToCartButton from '../add-to-cart-button';
 
 export default function ProductCard({ product }: { product: Product }) {
   const { title, price, images } = product;
@@ -18,9 +19,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <Text size="sm" c="dimmed">
         ${price}
       </Text>
-      <Button color="blue" fullWidth mt="md" radius="md">
-        Add to Basket
-      </Button>
+      <AddToCartButton product={product} />
     </Card>
   );
 }

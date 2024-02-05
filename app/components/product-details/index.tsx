@@ -1,10 +1,11 @@
 'use client';
 
-import { Card, Text, Button, Rating } from '@mantine/core';
+import { Card, Text, Rating } from '@mantine/core';
 import { EmblaOptionsType } from 'embla-carousel';
-import styles from './index.module.scss'; // SCSS modülü
+import styles from './index.module.scss';
 import Carousel from '../carousel';
 import { Product } from '@/types';
+import AddToCartButton from '../add-to-cart-button';
 
 const OPTIONS: EmblaOptionsType = {
   slidesToScroll: 'auto',
@@ -27,7 +28,7 @@ const ProductDetailsCard = ({ product }: { product: Product }) => {
             </Text>
             <Rating value={Math.floor(Math.random() * 5) + 1} readOnly />
             <Text weight={500} size="md">{`$${product.price}`}</Text>
-            <Button>Add to Cart</Button>
+            <AddToCartButton product={product} />
           </div>
         </div>
       </div>
