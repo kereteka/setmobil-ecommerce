@@ -11115,6 +11115,7 @@ __metadata:
     ts-jest: "npm:^29.1.1"
     typescript: "npm:5.2.2"
     use-debounce: "npm:^10.0.0"
+    webpack: "npm:^5.90.1"
   languageName: unknown
   linkType: soft
 
@@ -15844,7 +15845,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:5":
+"webpack@npm:5, webpack@npm:^5.90.1":
   version: 5.90.1
   resolution: "webpack@npm:5.90.1"
   dependencies:
